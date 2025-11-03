@@ -134,7 +134,7 @@ def train(cfg_dict: DictConfig):
     trainer = Trainer(
         accelerator="gpu",
         logger=logger,
-        devices="auto",
+        devices="7",
         strategy="ddp" if torch.cuda.device_count() > 1 else "auto",
         callbacks=callbacks,
         val_check_interval=cfg.trainer.val_check_interval,

@@ -57,7 +57,7 @@ class GaussianAdapter(nn.Module):
         raw_gaussians: Float[Tensor, "*#batch _"],
         image_shape: tuple[int, int],
         eps: float = 1e-8,
-        sh_base: Float[Tensor, "*#batch 3"] = None,
+        sh_base: Float[Tensor, "*#batch 3"] | None = None,
     ) -> Gaussians:
         device = extrinsics.device
         scales, rotations, sh = raw_gaussians.split((3, 4, 3 * self.d_sh), dim=-1)

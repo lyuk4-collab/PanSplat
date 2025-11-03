@@ -22,8 +22,11 @@ Cheng Zhang, Haofei Xu, Qianyi Wu, Camilo Cruz Gambardella, Dinh Phung, Jianfei 
 We use Anaconda to manage the environment. You can create the environment by running the following command:
 
 ```bash
-conda create -n pansplat python=3.10
+conda create -n pansplat_3 python=3.10
 conda activate pansplat
+
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+
 pip install torch==2.4.0+cu118 torchvision==0.19.0+cu118 torchaudio==2.4.0+cu118 --index-url https://download.pytorch.org/whl/cu118
 pip install -r requirements.txt
 pip install git+https://github.com/dcharatan/diff-gaussian-rasterization-modified

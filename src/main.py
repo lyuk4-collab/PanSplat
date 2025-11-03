@@ -1,4 +1,9 @@
 import os
+
+# Help PyTorch manage large address spaces in fragmented scenarios when multiple
+# allocations share address ranges. Must be set before torch imports CUDA.
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+
 from pathlib import Path
 import warnings
 import sys

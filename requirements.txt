@@ -31,3 +31,4 @@ PyYAML
 tensorboardX
 timm
 tqdm
+git+https://github.com/dcharatan/diff-gaussian-rasterization-modified
